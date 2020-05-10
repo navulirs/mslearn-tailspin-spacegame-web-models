@@ -1,5 +1,9 @@
+Trigger:
+ - "*"
 pool:
-  vmImage: 'Ubuntu-16.04'
+  name: "MyAgentPool"
+  demands:
+    - npm
 
 variables:
   buildConfiguration: 'Release'
@@ -39,6 +43,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models1'
+    publishVstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
