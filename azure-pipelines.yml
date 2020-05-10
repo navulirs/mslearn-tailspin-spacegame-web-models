@@ -1,5 +1,4 @@
-Trigger:
- - "*"
+
 pool:
   name: "MyAgentPool"
   demands:
